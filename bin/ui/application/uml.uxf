@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>260</y>
+      <w>190</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ui.application::TwinCalcApp
+--
+-contentPane: JPanel
+-middlePanel: JPanel
+-leftCalc: SingleCalc
+-rightCalc: SingleCalc
+--
++TwinCalcApp(): ctor
++main(String[] args): void
+-initMiddlePanel(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>120</y>
+      <w>460</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ui.panel::SingleCalc
+--
+-resultLabel: JLabel
+-expressionTextField: ExpressionTextField
+--
++SingleCalc(): ctor
++getResultLabel(): JLabel
++setResultLabel(JLabel resultLabel): void
++getExpressionTextField(): ExpressionTextField
++setExpressionTextField(ExpressionTextField equationTextField): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>140</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>440</y>
+      <w>400</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ui.button::DeleteButton
+--
+-BUTTON_CODE = 5: int
+--
++DeleteButton(SingleCalc leftCalc, SingleCalc rightCalc): ctor
++changeText(SingleCalc panel): void
++setCalcFocus(int calcFocus): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>310</y>
+      <w>390</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ui.button::MoveButton
+--
+-calcFrom: SingleCalc
+-calcTo: SingleCalc
+--
++MoveButton(SingleCalc calcFrom, SingleCalc calcTo): ctor
++changeText(SingleCalc panel): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>310</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>340</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;120.0</additional_attributes>
+  </element>
+</diagram>
